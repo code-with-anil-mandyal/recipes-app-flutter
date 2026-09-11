@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'presentation/screens/recipe_list_screen.dart';
+import 'presentation/screens/main_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Recipe App',
-      home: const RecipeListScreen(),
+      //home: const RecipeListScreen(),
+      home: const MainScreen(),
     );
   }
 }

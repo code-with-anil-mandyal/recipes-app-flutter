@@ -7,6 +7,7 @@ import '../../domain/repositories/recipe_repository.dart';
 import '../../domain/usecases/get_recipe_tags.dart';
 import '../../domain/usecases/get_recipes.dart';
 import '../../domain/usecases/get_recipes_by_tag.dart';
+import '../../domain/usecases/get_search_recipes.dart';
 
 final dioProvider = Provider<Dio>((ref) {
   return Dio();
@@ -43,4 +44,11 @@ final getRecipesByTagProvider = Provider<GetRecipesByTag>((ref) {
   final repository = ref.watch(recipeRepositoryProvider);
 
   return GetRecipesByTag(repository);
+});
+
+//search recipes
+final searchRecipesProvider = Provider<SearchRecipes>((ref) {
+  final repository = ref.watch(recipeRepositoryProvider);
+
+  return SearchRecipes(repository);
 });

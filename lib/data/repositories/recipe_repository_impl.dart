@@ -24,4 +24,10 @@ class RecipeRepositoryImpl implements RecipeRepository {
   Future<RecipeResponseModel> getRecipesByTag(String tag) {
     return remoteDataSource.getRecipesByTag(tag);
   }
+
+  //search recipes
+  @override
+  Future<RecipeResponseModel> searchRecipes(String query) {
+    return remoteDataSource.searchRecipes(query);
+  }
 }

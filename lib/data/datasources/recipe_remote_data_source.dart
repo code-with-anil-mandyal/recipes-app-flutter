@@ -19,4 +19,7 @@ abstract class RecipeRemoteDataSource {
     @Path('tag') String tag, {
     @Query('limit') int limit = 0,
   });
+
+  @GET('recipes/search')
+  Future<RecipeResponseModel> searchRecipes(@Query('q') String query);
 }

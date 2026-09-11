@@ -9,4 +9,7 @@ abstract class RecipeRepository {
 
   //get recipes based on category
   Future<RecipeResponseModel> getRecipesByTag(String tag);
+
+  //search recipes
+  Future<RecipeResponseModel> searchRecipes(String query);
 }
